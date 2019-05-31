@@ -6,13 +6,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css' />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <script type = "text/javascript">
+
+        function Warn() {
+
+
+            var lmbd = document.forms["fom"]["lmbd"].value;
+            if(lmbd==""){
+                alert("Please enter Lab Manager Birthdate");
+                return false;
+            }else{
+
+                var sl = document.forms["fom"]["sl"].value;
+                if(sl==""){
+                    alert("Please enter Site Location");
+                    return false;
+                }else{
+
+                    var smnum = document.forms["fom"]["smnum"].value;
+                    if(smnum==""){
+                        alert("Please enter Site Manager Phone Number");
+                        return false;
+                    }else{
+
+                        var colname = document.forms["fom"]["colname"].value;
+                        if(colname==""){
+                            alert("Please enter COL Name");
+                            return false;
+                        }else{
+
+                            var colbd = document.forms["fom"]["colbd"].value;
+                            if(colbd==""){
+                                alert("Please enter COL Birthdate");
+                                return false;
+                            }else{
+
+                                var asname = document.forms["fom"]["asname"].value;
+                                if(asname==""){
+                                    alert("Please enter Area Supervisor Name");
+                                    return false;
+                                }else{
+                                    return true;
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+
+        }
+    </script>
 </head>
 <body>
 
 <div class="field" >
 
 
-    <form id="fom" method="POST" action="/form">
+    <form id="fom" method="POST" action="/form" onsubmit="return Warn()">
 
         <h1 class="title is-2" align="center">Store Validation</h1>
 
@@ -237,7 +293,7 @@
             <div class="field-body">
                 <div class="field">
                     <div class="control">
-                        <button class="button is-rounded is-primary" type="submit"value="SUBMIT">Submit</button>
+                        <button class="button is-rounded is-primary" type="submit" value="SUBMIT">Submit</button>
                     </div>
                 </div>
             </div>

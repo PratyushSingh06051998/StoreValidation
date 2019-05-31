@@ -63,6 +63,7 @@ router.post('/',urlencoderParser ,function(req, res, next) {
 
     console.log(data);
 
+    res.send(JSON.stringify(data));
     res.end();
 });
 
